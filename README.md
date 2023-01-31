@@ -5,4 +5,4 @@ curl \
     --header "Content-Type: application/json" \
     --request POST \
     --data '{"ticker":"MSFT", "days":7}' \
-    http://35.88.41.214:8000/predict
+    http://35.88.41.214/predict
