@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM python:3.8
 
 WORKDIR .
 RUN apt-get -y update  && apt-get install -y \
@@ -12,7 +12,7 @@ RUN apt-get -y update  && apt-get install -y \
 RUN pip install --no-cache-dir -U pip
 RUN pip install --no-cache-dir -U cython
 RUN pip install --no-cache-dir -U numpy
-RUN pip install --no-cache-dir -U pystan==2.19.1.1
+RUN pip install --no-cache-dir -U pystan
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -U -r  requirements.txt
